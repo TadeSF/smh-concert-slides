@@ -7,7 +7,6 @@ To start the slide show:
 - `npm run dev`
 - visit http://localhost:3030
 
-
 ### Edit Slides
 Start editing the slides in the [pages](./pages) folder. In there – sorted by year – you find the respectiv slides for each concert.
 
@@ -25,6 +24,8 @@ There are a few layouts available:
     - `clicks` – the number of movements plus one (this is for highlighting the movements in the correct order. If you dont want this option, just set it to 0 or leave it out)
 - `song` – the same as piece, but with space for lyrics. Coming soon!
 - `logo` – the logo of the festival
+
+You can find an [example file](./pages/example.md) in the pages directory.
 
 ### Activate a concert
 Activate a concert by changing the path inside [slides.md](./slides.md) to see the changes.
