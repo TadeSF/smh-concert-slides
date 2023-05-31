@@ -1,9 +1,9 @@
 <template>
-  <div class="layout">
-    <div class="logo">
-      <img src="../img/logo_inv.svg" alt="Logo" />
+  <div class="flex flex-col h-full">
+    <div class="flex justify-center items-center h-52 overflow-hidden p-8">
+      <img class="max-h-full max-w-full" src="../img/logo_inv.svg" alt="Logo" />
     </div>
-    <div class="content">
+    <div class="flex-1 flex flex-col justify-center items-center text-center">
       <h1>{{ composer }}</h1>
       <h2>{{ name }}</h2>
       <h3 v-if="subtitle">{{ subtitle }}</h3>
@@ -38,35 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  overflow: hidden;
-  padding: 2em;
-
-}
-
-.logo img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 h1 {
   font-size: 2em;

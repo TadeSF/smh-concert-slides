@@ -1,3 +1,3 @@
 ---
-src: ./pages/konzert1.md
+src: ./pages/example.md
 ---

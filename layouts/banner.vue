@@ -1,20 +1,5 @@
 <template>
-    <div class="banner">
-        <img src="../img/banner.jpg" alt="Banner" />
+    <div class="banner flex justify-center items-center overflow-hidden">
+        <img class="max-h-full max-w-full" src="../img/banner.jpg" alt="Banner" />
     </div>
 </template>
-
-<style scoped>
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.banner img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-</style>
