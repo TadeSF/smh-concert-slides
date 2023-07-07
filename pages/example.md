@@ -1,16 +1,4 @@
 ---
-theme: default
-class: text-center
-highlighter: shiki
-fonts:
-  local: 'Monument Grotesk'
-transition: fade
-title: Sommerliche Musiktage Hitzacker
-# Page 1
-layout: banner
----
-
----
 # Page 2
 transition: fade
 layout: piece
@@ -48,7 +36,4 @@ movements:
   - Allegro
 columns: 3
 clicks: 3
----
----
-layout: logo
 ---

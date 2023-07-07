@@ -1,0 +1,24 @@
+.concert-enter-active,
+.concert-leave-active {
+  transition: opacity 1.5s ease;
+}
+
+.concert-enter-from,
+.concert-leave-to {
+  opacity: 0;
+}
+
+
+/* Transition over Black */
+.black-enter-active {
+  transition: opacity 2s cubic-bezier(0, -2, 1, 1);
+}
+
+.black-leave-active {
+  transition: opacity 2s cubic-bezier(0, 0, 1, 2);
+}
+
+.black-enter-from,
+.black-leave-to {
+  opacity: 0;
+}

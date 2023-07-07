@@ -1,5 +1,5 @@
 {
-  "name": "first-test",
+  "name": "smh-concert-slides",
   "private": true,
   "scripts": {
     "build": "slidev build",
@@ -7,6 +7,10 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@slidev/cli": "^0.42.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",

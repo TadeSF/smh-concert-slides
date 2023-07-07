@@ -3,7 +3,7 @@
     <div class="flex justify-center items-center h-52 overflow-hidden p-8">
       <img class="max-h-full max-w-full" src="../img/logo_inv.svg" alt="Logo" />
     </div>
-    <div class="flex-1 flex flex-col justify-center items-center text-center">
+    <div class="flex-1 flex flex-col justify-center items-center text-center m-10">
       <h1>{{ composer }}</h1>
       <h2>{{ name }}</h2>
       <h3 v-if="subtitle">{{ subtitle }}</h3>
