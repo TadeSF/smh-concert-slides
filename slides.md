@@ -4,9 +4,13 @@ class: text-center
 highlighter: shiki
 fonts:
   local: 'Monument Grotesk'
-transition: black
 title: Sommerliche Musiktage Hitzacker
 # Page 1
+transition: black
+layout: video
+---
+---
+transition: fade
 layout: banner
 ---
 ---
@@ -19,7 +23,7 @@ transition: concert
 layout: logo
 ---
 ---
-src: ./pages/2023-07-30_11.md
+src: ./pages/2023-08-01_20.md # Put the path to the markdown file here 
 ---
 ---
 transition: concert
@@ -28,4 +32,8 @@ layout: logo
 ---
 transition: fade
 layout: banner
+---
+---
+transition: black
+layout: video
 ---

@@ -1,0 +1,10 @@
+<template>
+  <video-player
+    src="./img/video.mp4"
+    poster="./img/banner.jpg"
+    :controls="false"
+    :loop="true"
+    :autoplay="true"
+    :muted="true"
+  />
+</template>
