@@ -3,9 +3,8 @@ theme: default
 class: text-center
 highlighter: shiki
 fonts:
-  local: 'Monument Grotesk'
+  local: Monument Grotesk
 title: Sommerliche Musiktage Hitzacker
-# Page 1
 transition: black
 layout: video
 ---
@@ -18,6 +17,7 @@ transition: black
 preload: false
 layout: mobile_warning
 ---
+<AudioPlayer audioSrc="./img/audio_alert.mp3" />
 ---
 transition: concert
 layout: logo

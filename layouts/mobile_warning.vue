@@ -15,12 +15,15 @@
         <p :class="parantheseClass">)</p>
       </div>
       <div class="flex-1 flex flex-col justify-center items-center gap-4">
-        <h1 class="text-4xl font-bold">
-          Bitte schalten Sie Ihr Mobiltelefon aus
-        </h1>
-        <h2 class="text-3xl font-bold">Please turn off your mobile devices</h2>
+        <transition name="fade">
+        <h1 v-if="showText" class="text-4xl font-bold ">{{ title }}</h1>
+        </transition>
+        <transition name="fade">
+        <h2 v-if="showText" class="text-3xl font-bold">{{ subtitle }}</h2>
+        </transition>
       </div>
     </div>
+    <slot />
   </div>
 </template>
 
@@ -30,8 +33,22 @@ export default {
     return {
       iconClassBell: 'fa-shake icon transition-all duration-1000 opacity-100', // Initial icon class
       iconClassBellSlash: 'icon-slash transition-all duration-1000 opacity-0',
-      parantheseClass: 'icon-wave opacity-100'
+      parantheseClass: 'icon-wave opacity-100',
+      title: "Bitte schalten Sie Ihre Mobiltelefone aus",
+      subtitle: "Please turn off your mobile devices",
+      showText: true,
     };
+  },
+  methods: {
+    updateText() {
+      this.showText = false;
+
+      setTimeout(() => {
+        this.title = "Vielen Dank!";
+        this.subtitle = "Thank you!";
+        this.showText = true;
+      }, 500);
+    }
   },
   mounted() {
     setTimeout(() => {
@@ -39,6 +56,9 @@ export default {
       this.iconClassBellSlash = 'icon-slash transition-all duration-1000 opacity-100'; // Remove transition class
       this.parantheseClass = 'icon-wave opacity-0';
     }, 5600);
+    setTimeout(() => {
+      this.updateText();
+    }, 9000);
   }
 };
 </script>
@@ -102,5 +122,15 @@ h2 {
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
