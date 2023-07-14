@@ -1,0 +1,54 @@
+{
+  "concert piece": {
+    "prefix": ["movements", "piece"],
+    "body": [
+      "---",
+      "transition: concert",
+      "layout: piece",
+      "composer: ${1:composer}",
+      "name: ${2:pieceName}",
+      "movements:",
+      "\t- ${3:movement1}",
+      "autoCountMovements: ${4|true,false|}",
+      "---"
+    ],
+    "description": "Concert piece with movements"
+  },
+  "concert piece no movements": {
+    "prefix": ["nomovements", "piece"],
+    "body": [
+      "---",
+      "transition: concert",
+      "layout: piece",
+      "composer: ${1:composer}",
+      "name: ${2:pieceName}",
+      "---"
+    ],
+    "description": "Concert piece without movements"
+  },
+  "logo": {
+    "prefix": "logo",
+    "body": ["---", "transition: ${1|concert,black|}", "layout: logo", "---"]
+  },
+  "banner": {
+    "prefix": "banner",
+    "body": ["---", "transition: black", "layout: banner", "---"]
+  },
+  "concert-break": {
+    "prefix": "break",
+    "body": [
+      "---",
+      "transition: black",
+      "layout: logo",
+      "---",
+      "---",
+      "transition: black",
+      "layout: banner",
+      "---",
+      "---",
+      "transition: concert",
+      "layout: logo",
+      "---"
+    ]
+  }
+}
