@@ -10,7 +10,6 @@ movements:
   - Adagio molto e cantabile
   - "Finale: Presto - Allegro assai"
 columns: 2
-clicks: 4
 ---
 ---
 transition: fade
@@ -23,7 +22,6 @@ movements:
   - "Menuetto: Allegretto – Trio"
   - "Finale: Allegro assai"
 columns: 2
-clicks: 4
 ---
 ---
 transition: fade
@@ -35,5 +33,4 @@ movements:
   - Adagio
   - Allegro
 columns: 3
-clicks: 3
 ---
