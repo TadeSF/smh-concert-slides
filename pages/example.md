@@ -9,19 +9,18 @@ movements:
   - Molto vivace
   - Adagio molto e cantabile
   - "Finale: Presto - Allegro assai"
-columns: 2
 ---
 ---
 transition: fade
 layout: piece
 composer: Wolfgang Amadeus Mozart
-name: Symphony No. 40 in G minor, K. 550
+name: Symphony No. 40 in G minor, KV 550
 movements:
-  - Molto allegro
-  - Andante
-  - "Menuetto: Allegretto – Trio"
-  - "Finale: Allegro assai"
-columns: 2
+  - I. Molto allegro
+  - II. Andante
+  - III. "Menuetto: Allegretto – Trio"
+  - IV. "Finale: Allegro assai"
+  - autoCountMovements: false
 ---
 ---
 transition: fade
@@ -32,5 +31,4 @@ movements:
   - (no tempo indication)
   - Adagio
   - Allegro
-columns: 3
 ---

@@ -12,7 +12,7 @@
       "autoCountMovements: ${4|true,false|}",
       "---"
     ],
-    "description": "Concert piece with movements"
+    "description": "Concert piece with movements",
   },
   "concert piece no movements": {
     "prefix": ["nomovements", "piece"],
@@ -24,15 +24,15 @@
       "name: ${2:pieceName}",
       "---"
     ],
-    "description": "Concert piece without movements"
+    "description": "Concert piece without movements",
   },
   "logo": {
     "prefix": "logo",
-    "body": ["---", "transition: ${1|concert,black|}", "layout: logo", "---"]
+    "body": ["---", "transition: ${1|concert,black|}", "layout: logo", "---"],
   },
   "banner": {
     "prefix": "banner",
-    "body": ["---", "transition: black", "layout: banner", "---"]
+    "body": ["---", "transition: black", "layout: banner", "---"],
   },
   "concert-break": {
     "prefix": "break",
@@ -49,6 +49,6 @@
       "transition: concert",
       "layout: logo",
       "---"
-    ]
+    ],
   }
 }
