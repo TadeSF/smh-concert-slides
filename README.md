@@ -20,7 +20,7 @@ The concert slides are wrapped in a few other slides. These are:
 - Banner
 - Mobile Warning (turn off devices notice)
 - blank logo slide
-- >>Content<< (the actual concert slides)
+- -> Content (the actual concert slides) <-
 - blank logo slide
 - Banner
 - Video at the end
@@ -36,7 +36,7 @@ There are a few layouts available:
 - `logo` – the logo of the festival
 - `piece` – a piece with composer, name, (subtitle), movements, columns and clicks
     - `composer` – the composer
-    - supertitle – the supertitle (above the name) of the piece (optional)
+    - `supertitle` – the supertitle (above the name) of the piece (optional)
     - `name` – the title of the piece ("title" is reserved for the title of the slide, hence we use "name" here)
     - `subtitle` – the subtitle of the piece (optional)
     - `movements` – the movements of the piece (in a list with `-` in front of each movement). Arrangement and click count are done automatically (optional)
