@@ -26,6 +26,20 @@
     ],
     "description": "Concert piece without movements",
   },
+  "concert song": {
+    "prefix": ["song"],
+    "body": [
+      "---",
+      "transition: concert",
+      "layout: song",
+      "composer: ${1:composer}",
+      "name: ${2:songName}",
+      "lyrics:",
+      "\t- ${3:lyrics1}",
+      "---"
+    ],
+    "description": "Concert song",
+  },
   "logo": {
     "prefix": "logo",
     "body": ["---", "transition: ${1|concert,black|}", "layout: logo", "---"],

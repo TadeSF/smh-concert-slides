@@ -35,13 +35,18 @@ There are a few layouts available:
 - `banner` – a full screen image
 - `logo` – the logo of the festival
 - `piece` – a piece with composer, name, (subtitle), movements, columns and clicks
-    - `composer` – the composer
-    - `supertitle` – the supertitle (above the name) of the piece (optional)
-    - `name` – the title of the piece ("title" is reserved for the title of the slide, hence we use "name" here)
-    - `subtitle` – the subtitle of the piece (optional)
-    - `movements` – the movements of the piece (in a list with `-` in front of each movement). Arrangement and click count are done automatically (optional)
-    - `autoCountMovements` – boolean to turn on/off the automatic counting of movements (optional, default: `true`)
-- `song` – the same as piece, but with space for lyrics. Coming soon!
+  - `composer` – the composer
+  - `supertitle` – the supertitle (above the name) of the piece (optional)
+  - `name` – the title of the piece ("title" is reserved for the title of the slide, hence we use "name" here)
+  - `subtitle` – the subtitle of the piece (optional)
+  - `movements` – the movements of the piece (in a list with `-` in front of each movement). Arrangement and click count are done automatically (optional)
+  - `autoCountMovements` – boolean to turn on/off the automatic counting of movements (optional, default: `true`)
+- `song` – the same as piece, but with space for lyrics and without movements
+  - `composer` – the composer
+  - `supertitle` – the supertitle (above the name) of the piece (optional)
+  - `name` – the title of the piece ("title" is reserved for the title of the slide, hence we use "name" here)
+  - `subtitle` – the subtitle of the piece (optional)
+  - `lyrics` – the lyrics of the song (in a list with `-`in front of each line). Arrangement and click count are done automatically. If you need a black paragraph, use an empty line in the list. (optional)
 
 You can find an [example file](./pages/example.md) in the pages directory.
 
