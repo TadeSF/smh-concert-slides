@@ -114,6 +114,7 @@ h3 {
   position: absolute;
   text-align: center;
   width: 100%;
+  font-size: 1.2rem;
 }
 
 .wheel p {
