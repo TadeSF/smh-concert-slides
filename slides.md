@@ -14,10 +14,6 @@ layout: banner
 ---
 ---
 transition: fade
-layout: sponsors
----
----
-transition: fade
 layout: banner
 ---
 ---
