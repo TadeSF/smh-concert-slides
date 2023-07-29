@@ -107,8 +107,8 @@ h3 {
 }
 
 .wheel {
-  transition: all 1.5s ease-in-out;
-  transition: opacity 0.5 ease-in-out;
+  transition: all 1.5s ease-out;
+  transition: opacity 0.5 ease-out;
   opacity: 0%;
   color: #fff;
   position: absolute;
