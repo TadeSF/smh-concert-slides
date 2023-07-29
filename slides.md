@@ -13,11 +13,19 @@ transition: fade
 layout: banner
 ---
 ---
+transition: fade
+layout: sponsors
+---
+---
+transition: fade
+layout: banner
+---
+---
 transition: black
 preload: false
 layout: mobile_warning
 ---
-<AudioPlayer audioSrc="./img/audio_alert.mp3" />
+<AudioPlayer audioSrc="./img/audio_aler.mp3" />
 ---
 transition: concert
 layout: logo
