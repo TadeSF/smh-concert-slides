@@ -71,7 +71,7 @@ h3 {
 }
 .not-highlight {
   transition: all 1s ease-in-out;
-  color: #888;
+  color: #5c5c5c;
 }
 .movements {
   margin-top: 1em;
@@ -81,9 +81,9 @@ h3 {
   justify-content: space-evenly;
   column-gap: 2em;
   row-gap: 0.5em;
-  font-size: 1em;
+  font-size: 1.3em;
   font-style: italic;
-  color: #888;
+  color: #5c5c5c;
 }
 
 .movement_index {
