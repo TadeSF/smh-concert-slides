@@ -21,7 +21,7 @@ transition: black
 preload: false
 layout: mobile_warning
 ---
-<AudioPlayer audioSrc="./img/audio_aler.mp3" />
+<AudioPlayer audioSrc="./img/audio_alert_2023.mp3" />
 ---
 transition: concert
 layout: logo
