@@ -27,7 +27,7 @@ transition: concert
 layout: logo
 ---
 ---
-src: ./pages/2023-07-30_18.md
+src: ./pages/2023-07-31_20.md
 ---
 ---
 transition: concert
