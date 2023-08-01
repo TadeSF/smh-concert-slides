@@ -21,13 +21,13 @@ transition: black
 preload: false
 layout: mobile_warning
 ---
-<AudioPlayer audioSrc="./img/audio_alert_2023.mp3" />
+<!-- <AudioPlayer audioSrc="./img/audio_alert_2023.mp3" /> -->
 ---
 transition: concert
 layout: logo
 ---
 ---
-src: ./pages/2023-07-31_20.md
+src: ./pages/2023-08-01_20.md
 ---
 ---
 transition: concert
