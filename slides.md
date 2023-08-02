@@ -14,7 +14,7 @@ layout: banner
 ---
 ---
 transition: fade
-layout: banner
+layout: sponsors
 ---
 ---
 transition: black
@@ -27,7 +27,7 @@ transition: concert
 layout: logo
 ---
 ---
-src: ./pages/2023-08-01_20.md
+src: ./pages/2023-08-02_19.md
 ---
 ---
 transition: concert
