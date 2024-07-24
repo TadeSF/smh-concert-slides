@@ -1,10 +1,13 @@
 <template>
-  <video-player
-    src="./img/video.mp4"
-    poster="./img/banner.jpg"
-    :controls="false"
-    :loop="true"
-    :autoplay="true"
-    :muted="true"
-  />
+<div>
+  <video
+    autoplay
+    muted
+    loop
+    class="w-full h-auto"
+  >
+    <source src="../img/video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 </template>
