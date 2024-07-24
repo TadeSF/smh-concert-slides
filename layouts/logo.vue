@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-full">
     <div class="flex justify-center items-center h-52 overflow-hidden p-8">
-      <img src="../img/logo_inv.svg" alt="Logo" class="max-h-full max-w-full" />
+      <img src="/Logo_inv.svg" alt="Logo" class="max-h-full max-w-full" />
     </div>
     <div class="flex-1 flex flex-col justify-center items-center text-center" />
   </div>

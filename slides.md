@@ -17,7 +17,7 @@ layout: full
 ---
 
 <div class="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center">
-  <img src="./img/sponsors.png" alt="Sponsors" class="max-w-full max-h-full object-contain" />
+  <img src="/sponsors.png" alt="Sponsors" class="max-w-full max-h-full object-contain" />
 </div>
 
 ---
@@ -25,7 +25,7 @@ transition: black
 preload: false
 layout: mobile_warning
 ---
-<!-- <AudioPlayer audioSrc="./img/audio_alert_2023.mp3" /> -->
+<!-- <AudioPlayer audioSrc="/audio_alert_2023.mp3" /> -->
 ---
 transition: concert
 layout: logo
