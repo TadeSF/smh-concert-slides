@@ -8,13 +8,11 @@
     >
       <h1>Rundfunk-Sendetermine</h1>
       <div class="flex flex-col justify-center items-center text-center gap-4">
-        <div
-          v-for="(broadcast, index) in broadcasts"
-          :key="index"
-        >
+        <div v-for="(broadcast, index) in broadcasts" :key="index">
           <h2 class="">{{ broadcast.station }} – {{ broadcast.date }}</h2>
           <h3 class="highlight">
-            Ab <span class="font-bold"> {{ broadcast.time }}</span> in der Sendung "{{ broadcast.title }}"
+            Ab <span class="font-bold"> {{ broadcast.time }}</span> in der
+            Sendung "{{ broadcast.title }}"
           </h3>
         </div>
       </div>
@@ -22,6 +20,16 @@
   </div>
 </template>
 <script>
+import { onMounted } from "vue";
+
+onMounted(() => {
+  if ($slidev.nav.currentPage === $page.value) {
+    setTimeout(() => {
+      $slidev.nav.nextSlide();
+    }, 2000);
+  }
+});
+
 export default {
   props: {
     broadcasts: { type: Array, default: () => [] },
@@ -30,13 +38,12 @@ export default {
     test() {
       console.log(this.broadcasts);
       return 1;
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-
 h1 {
   font-size: 2em;
   /* Uppercase */
@@ -59,5 +66,4 @@ h3 {
 .highlight {
   color: #e5013b;
 }
-
 </style>
