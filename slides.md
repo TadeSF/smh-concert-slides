@@ -9,10 +9,6 @@ transition: black
 layout: video
 ---
 ---
-transition: fade
-layout: banner
----
----
 layout: sponsors
 ---
 ---
@@ -27,7 +23,7 @@ layout: logo
 ---
 ---
 # Hier Konzertdatei einfügen
-src: ./pages/2024/2024-07-27_17.md
+src: ./pages/2024/2024-07-28_15.md
 ---
 ---
 transition: concert
