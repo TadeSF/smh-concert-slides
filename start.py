@@ -83,7 +83,9 @@ def main():
     update_file(concert)
     print("Concert updated.")
 
-    if os.system("git status --porcelain") != 0:
+    print(os.popen("git status --porcelain").read())
+    print(len(os.popen("git status --porcelain").read()))
+    if os.popen("git status --porcelain").read() == 0:
         print("No changes detected in the repository.")
     else:
         print("Pushing changes to the repository...")
