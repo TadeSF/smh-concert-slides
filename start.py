@@ -30,7 +30,7 @@ def choose_concert(concerts):
 
 def update_file(concert):
     modify_next = False
-    
+
     with open(MAIN_FILE, "r") as file:
         content = file.read()
 
@@ -41,6 +41,9 @@ def update_file(concert):
             if modify_next:
                 content = content.replace(line, f"src: ./pages/{YEAR}/{concert}")
                 break
+
+    with open(MAIN_FILE, "w") as file:
+        file.write(content)
 
 
 def main():
