@@ -83,16 +83,19 @@ def main():
     update_file(concert)
     print("Concert updated.")
 
-    print("Pushing changes to the repository...")
-    push_process = os.system("git add .")
-    push_process += os.system("git commit -m 'Automatic concert update'")
-    push_process += os.system("git push")
+    if os.system("git status --porcelain") != 0:
+        print("No changes detected in the repository.")
+    else:
+        print("Pushing changes to the repository...")
+        push_process = os.system("git add .")
+        push_process += os.system("git commit -m 'Automatic concert update'")
+        push_process += os.system("git push")
 
-    if push_process != 0:
-        print("Error pushing changes to the repository.")
-        return
+        if push_process != 0:
+            print("Error pushing changes to the repository.")
+            return
 
-    print("Changes pushed to the repository.")
+        print("Changes pushed to the repository.")
 
     print("Starting the server...")
     print("Press Ctrl+C to stop the server.")
