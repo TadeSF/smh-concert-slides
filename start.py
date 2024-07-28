@@ -3,6 +3,8 @@ import re
 from PyInquirer import prompt
 
 YEAR = 2024
+MARKER = "# Hier Konzertdatei einfügen"
+MAIN_FILE = "slides.md"
 
 
 def get_concerts():
@@ -26,22 +28,29 @@ def choose_concert(concerts):
     return answers
 
 
-def update_file(concert_file):
-    update_line = False
-
-    with open(f"pages/{YEAR}/{concert_file}", "r") as file:
+def update_file(concert):
+    with open(MAIN_FILE, "r") as file:
         content = file.read()
 
-        for line in content.split("\n"):
-            if "# Hier Konzertdatei einfügen" in line:
-                update_line = True
-                continue
+    # Find the marker and the next newline character after the marker
+    start_index = content.find(MARKER)
+    if start_index == -1:
+        print(
+            f"Marker not found. Make sure that the slides.md file contains the marker '{MARKER}'"
+        )
+        raise Exception("Exeting: Marker not found.")
 
-            if update_line:
-                content = content.replace(line, f"src: ./pages/{YEAR}/{concert_file}")
+    # Find the end of the line following the marker
+    end_index = content.find("\n", start_index + len(MARKER))
+    if end_index == -1:
+        end_index = len(content)  # Assume end of file if no newline found
 
-    with open(f"pages/{YEAR}/{concert_file}", "w") as file:
-        file.write(content)
+    # Replace the line following the marker
+    new_content = content[: start_index + len(MARKER)] + concert + content[end_index:]
+
+    # Write back to the same file or a new one if needed
+    with open(MAIN_FILE, "w") as file:
+        file.write(new_content)
 
 
 def main():
