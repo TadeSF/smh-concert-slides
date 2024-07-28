@@ -21,7 +21,7 @@ def choose_concert(concerts):
             "type": "list",
             "name": "concert",
             "message": "Select a concert:",
-            "choices": concerts,
+            "choices": [{"value": concert, "name": concert + "test"} for concert in concerts],
         }
     ]
     answers = prompt(questions)
@@ -72,7 +72,8 @@ def main():
 
     print("\nRepository updated.\n\n")
 
-    concert = choose_concert(get_concerts())
+    concerts = sorted(get_concerts(), reverse=True)
+    concert = choose_concert(concerts)
     concert = concert.get("concert")
 
     if not concert:
