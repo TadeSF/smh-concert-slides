@@ -1,10 +1,12 @@
 import os
 import re
 from PyInquirer import prompt
+from datetime import datetime
 
 YEAR = 2024
 MARKER = "# Hier Konzertdatei einfügen"
 MAIN_FILE = "slides.md"
+DATE_FORMAT = "%Y-%m-%d_%H"
 
 
 def get_concerts():
@@ -21,7 +23,9 @@ def choose_concert(concerts):
             "type": "list",
             "name": "concert",
             "message": "Select a concert:",
-            "choices": [{"value": concert, "name": concert + "test"} for concert in concerts],
+            "choices": [{
+                "value": concert,
+                "name": f"Concert on {datetime.strptime(concert.replace(".md", ""), DATE_FORMAT).strftime("%A, %Y-%m-%d %H:%M")}"} for concert in concerts],
         }
     ]
     answers = prompt(questions)
@@ -83,20 +87,6 @@ def main():
     print(f"Updating concert {concert}...")
     update_file(concert)
     print("Concert updated.")
-
-    if len(os.popen("git status --porcelain").read()) == 0:
-        print("No changes detected in the repository.")
-    else:
-        print("Pushing changes to the repository...")
-        push_process = os.system("git add .")
-        push_process += os.system("git commit -m 'Automatic concert update'")
-        push_process += os.system("git push")
-
-        if push_process != 0:
-            print("Error pushing changes to the repository.")
-            return
-
-        print("Changes pushed to the repository.")
 
     print("Starting the server...")
     print("Press Ctrl+C to stop the server.")
