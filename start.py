@@ -29,28 +29,18 @@ def choose_concert(concerts):
 
 
 def update_file(concert):
+    modify_next = False
+    
     with open(MAIN_FILE, "r") as file:
         content = file.read()
 
-    # Find the marker and the next newline character after the marker
-    start_index = content.find(MARKER)
-    if start_index == -1:
-        print(
-            f"Marker not found. Make sure that the slides.md file contains the marker '{MARKER}'"
-        )
-        raise Exception("Exeting: Marker not found.")
-
-    # Find the end of the line following the marker
-    end_index = content.find("\n", start_index + len(MARKER))
-    if end_index == -1:
-        end_index = len(content)  # Assume end of file if no newline found
-
-    # Replace the line following the marker
-    new_content = content[: start_index + len(MARKER)] + concert + content[end_index:]
-
-    # Write back to the same file or a new one if needed
-    with open(MAIN_FILE, "w") as file:
-        file.write(new_content)
+        for line in content.split("\n"):
+            if MARKER in line:
+                modify_next = True
+                continue
+            if modify_next:
+                content = content.replace(line, f"src: ./pages/{YEAR}/{concert}")
+                break
 
 
 def main():

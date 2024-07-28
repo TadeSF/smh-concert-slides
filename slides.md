@@ -26,7 +26,7 @@ transition: concert
 layout: logo
 ---
 ---
-# Hier Konzertdatei einfügen2024-07-27_17.md
+# Hier Konzertdatei einfügen
 src: ./pages/2024/2024-07-28_11.md
 ---
 ---
