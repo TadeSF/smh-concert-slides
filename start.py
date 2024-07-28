@@ -33,7 +33,7 @@ def update_file(concert_file):
         content = file.read()
 
         for line in content.split("\n"):
-            if "# Update" in line:
+            if "# Hier Konzertdatei einfügen" in line:
                 update_line = True
                 continue
 
