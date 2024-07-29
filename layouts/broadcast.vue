@@ -20,15 +20,6 @@
   </div>
 </template>
 <script>
-import { onMounted } from "vue";
-
-onMounted(() => {
-  if ($slidev.nav.currentPage === $page.value) {
-    setTimeout(() => {
-      $slidev.nav.nextSlide();
-    }, 2000);
-  }
-});
 
 export default {
   props: {
