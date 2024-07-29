@@ -19,6 +19,9 @@
         <span v-click></span>
       </span>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 pb-4 flex justify-center items-center">
+      <p class="not-highlight">{{ note }}</p>
+    </div>
   </div>
 </template>
 
@@ -31,6 +34,7 @@ export default {
     subtitle: { type: String, default: '' },
     movements: { type: Array, default: () => [] },
     autoCountMovements: { type: Boolean, default: true },
+    note: { type: String, default: '' },
   },
   computed: {
     currentStep() {
