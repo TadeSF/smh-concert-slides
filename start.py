@@ -1,3 +1,5 @@
+#!./.venv/bin/activate
+
 import os
 import re
 from PyInquirer import prompt
